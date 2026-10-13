@@ -1,0 +1,1 @@
+const geral = [...pinturas, ...esculturas, ...fotografias, ...bustos];

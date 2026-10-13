@@ -1,0 +1,113 @@
+:root {
+    --amarelo-principal: #ffda11;
+    --amarelo-escuro: #E8E401;
+    --amarelo-claro: #F6F37D;
+    --azul-principal: #0000b5;
+    --azul-claro: #4863f8;
+    --branco: #ffffff;
+    --preto: #1a1a1a;
+}
+
+/* Corrigido: era '-' e agora é '*' para aplicar a todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--branco);
+    color: var(--preto);
+    line-height: 1.6;
+}
+
+nav {
+    background-color: var(--amarelo-principal);
+    padding: 0.8rem;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--azul-principal);
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+/* --- CABEÇALHO E LOGO --- */
+header {
+    background-color: #5252f6; /* Azul principal do projeto */
+    text-align: center;
+    top: 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    width: 100%;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.logo-container img {
+    /* Trocamos max-height por width para forçar o tamanho real */
+    width: 300px; /* Aumente este valor se quiser ainda maior */
+    height: auto; 
+    display: block;
+    max-width: 90%; /* Evita que a logo saia da tela no celular */
+    filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.3));
+}
+
+/* --- RODAPÉ --- */
+footer {
+    background-color: #5252f6; /* Azul igual ao cabeçalho */
+    color: var(--branco);
+    text-align: center;
+    padding: 3rem 1.5rem;
+    margin-top: 3rem;
+    border-top: 8px solid var(--amarelo-principal);
+}
+
+/* --- BOTÃO DE ÁUDIO --- */
+.btn-audio {
+    background-color: var(--azul-principal);
+    color: var(--branco);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin: 1.5rem 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn-audio:hover {
+    background-color: var(--azul-claro);
+    transform: scale(1.05);
+}
+
+/* --- AJUSTE PARA CELULAR --- */
+@media (max-width: 600px) {
+    .logo-container img {
+        width: 250px; /* Tamanho proporcional para telas pequenas */
+    }
+    header {
+        padding: 20px 0;
+    }
+    nav {
+        gap: 10px;
+    }
+    nav a {
+        font-size: 0.8rem;
+    }
+}

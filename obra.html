@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obra - Sociologia Digital</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/obra.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="assets/logo/logo.png" alt="" onerror="this.style.display='none'">
+            </a>
+        </div>
+    </header>
+
+    <main class="container-obra">
+        <a href="index.html" class="voltar-link">← Voltar para a Galeria</a>
+
+        <img id="obra-imagem" src="" alt="" class="imagem-obra-grande">
+
+        <div class="detalhes-obra">
+            <h1 id="obra-titulo">Título da Obra</h1>
+
+            <button id="btn-play-audio" class="btn-audio">
+                <span>▶ Ouvir Audiodescrição</span>
+            </button>
+            <audio id="audio-player" style="display:none;"></audio>
+
+            <blockquote id="bloco-frase" class="frase-destaque" hidden>
+                <p id="obra-frase"></p>
+            </blockquote>
+
+            <div class="descricao-visual" id="bloco-biografia" hidden>
+                <h2>Quem foi</h2>
+                <p id="obra-biografia"></p>
+            </div>
+
+            <div class="foto-impressao" id="bloco-impressao" hidden>
+                <h2>Nossa impressão</h2>
+                <img id="obra-impressao" src="" alt="">
+            </div>
+
+            <div class="info-basica" id="bloco-info">
+                <div class="info-item" id="item-autor">
+                    <span class="info-label">Autor:</span>
+                    <span id="obra-autor">Nome do Autor</span>
+                </div>
+                <div class="info-item" id="item-ano">
+                    <span class="info-label">Ano de Produção:</span>
+                    <span id="obra-ano">0000</span>
+                </div>
+                <div class="info-item" id="item-tecnica">
+                    <span class="info-label">Técnica Utilizada:</span>
+                    <span id="obra-tecnica">Técnica</span>
+                </div>
+            </div>
+
+            <div class="descricao-visual" id="bloco-descricao">
+                <h2>Descrição Visual</h2>
+                <p id="obra-descricao-visual">Descrição detalhada da obra...</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sociologia Digital</p>
+    </footer>
+
+    <script src="js/dados/pinturas.js"></script>
+    <script src="js/dados/esculturas.js"></script>
+    <script src="js/dados/fotografias.js"></script>
+    <script src="js/dados/bustos.js"></script>
+    <script src="js/dados/geral.js"></script>
+    <script src="js/obra.js"></script>
+</body>
+</html>
